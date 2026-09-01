@@ -15,7 +15,8 @@ function AlertsPanel() {
 
   const fetchAlerts = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/alerts/')
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const response = await fetch(`${apiUrl}/api/alerts/`)
       const data = await response.json()
       setAlerts(data)
     } catch (error) {
@@ -26,7 +27,8 @@ function AlertsPanel() {
   const handleBroadcast = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch('http://localhost:8000/api/alerts/broadcast', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const response = await fetch(`${apiUrl}/api/alerts/broadcast`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

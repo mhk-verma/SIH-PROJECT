@@ -16,18 +16,20 @@ function MapView() {
 
   const fetchMapData = async () => {
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      
       // Fetch districts
-      const districtsRes = await fetch('http://localhost:8000/api/districts/')
+      const districtsRes = await fetch(`${apiUrl}/api/districts/`)
       const districtsData = await districtsRes.json()
       setDistricts(districtsData)
 
       // Fetch incidents
-      const incidentsRes = await fetch('http://localhost:8000/api/incidents/')
+      const incidentsRes = await fetch(`${apiUrl}/api/incidents/`)
       const incidentsData = await incidentsRes.json()
       setIncidents(incidentsData)
 
       // Fetch vehicles
-      const vehiclesRes = await fetch('http://localhost:8000/api/vehicles/')
+      const vehiclesRes = await fetch(`${apiUrl}/api/vehicles/`)
       const vehiclesData = await vehiclesRes.json()
       setVehicles(vehiclesData)
 

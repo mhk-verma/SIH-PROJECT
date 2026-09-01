@@ -1,0 +1,76 @@
+.map-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.map-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.risk-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-color.high {
+  background: #ef4444;
+}
+
+.legend-color.medium {
+  background: #f59e0b;
+}
+
+.legend-color.low {
+  background: #22c55e;
+}
+
+.popup-content {
+  min-width: 200px;
+}
+
+.popup-content h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.popup-content p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #666;
+}
+
+.map-info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.map-info p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
